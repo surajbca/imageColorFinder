@@ -1,0 +1,32 @@
+#uploadImg{
+    width: 70em;
+        height: 5em;
+        margin-left: 150px;
+
+       
+}
+
+#imgdiv{
+width: 70em;
+    height: 30em;
+    margin-left: 148px;
+}
+
+#imgUpload{
+width: 22em;
+    height: 20em;
+    margin: 42px 32px 43px 359px;
+}
+
+#Algorithm{
+    margin-left: 42em;
+}
+#checkBox{
+    margin-left: 36em;
+}
+
+#colorInfoDiv{
+    height: 13em;
+    width: 38em;
+    margin-left: 26em;
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorFinder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./imageColorFinder/index.css">
+    <script src="./imageColorFinder/UploadImg.js"></script>
+    <script src="./imageColorFinder/Algorithm.js"></script>
+    <script src="./imageColorFinder/share.js"></script>
+    <script src="./imageColorFinder/AddtoFavs.js"></script>
+    <script src="./imageColorFinder/ReportBug.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand" style="margin-left: 140px;">
+            <strong class="navbar-item is-size-4" href="">
+                Image Average Color Finder
+            </strong>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons" style="margin-right: 140px;">
+                        <button class="button is-rounded js-modal-trigger" data-target="modal-js-example">
+                            <span class="icon">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </span>
+                            <span>Share</span>
+                        </button>
+                        <button class="button is-rounded js-modal-trigger2" data-target="modal-js-example2">
+                            <span class=" icon">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </span>
+                            <span>Add to Favs</span>
+                        </button>
+                        <button class="button is-rounded js-modal-trigger3" data-target="modal-js-example3">
+                            <span class="icon">
+                                <i class="fa fa-bug" aria-hidden="true"></i>
+                            </span>
+                            <span>Report Bug</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--start first modal-->
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <div style="margin-left: 140px;">
+                    <p class="buttons has-text-centered">
+                        <button class="button">
+                            <span class="icon">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                            </span>
+                            <span>Share Tool</span>
+                        </button>
+                        <button class="button is-primary">
+                            <span class="icon">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </span>
+                            <span>Share 10015</span>
+                        </button>
+                    </p>
+                </div>
+                <div class="box has-background-grey-lighter mt-4">
+                    <div class="has-text-centered">
+                        <p>You are currently sharing;</p>
+                    </div>
+                    <div>
+                        <strong class="has-text-centered is-size-3 " style="margin-left: 60px;">Image Average Color
+                            Finder</strong>
+                    </div>
+                    <div class="has-text-centered is-size-1">
+                        <span class="icon is-large">
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="has-text-centered">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </span>
+                            <span class="icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </span>
+                            <span class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                            <span class="icon">
+                                <i class="fa fa-comments" aria-hidden="true"></i>
+                            </span>
+                            <span class="icon">
+                                <i class="fa fa-clone" aria-hidden="true"></i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Your content -->
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!--end first modal-->
+
+    <!--start second modal -->
+    <div id="modal-js-example2" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <div>
+                    <strong class="is-size-3">Sign In / Register</strong>
+                </div>
+                <div class="mt-3">
+                    <p>You need to sign in or register to use this feature.</p>
+                </div>
+
+                <div class="mt-4" style="margin-left: 200px;">
+                    <p class="buttons">
+                        <button class="button is-rounded">
+                            <span class="icon">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </span>
+                            <span>Register</span>
+                        </button>
+                        <button class="button is-primary is-rounded">
+                            <span class="icon">
+                                <i class="fa fa-power-off" aria-hidden="true"></i>
+                            </span>
+                            <span>Sign in</span>
+                        </button>
+                    </p>
+                </div>
+                <!-- Your content -->
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!--end second modal-->
+
+    <!--start third modal -->
+    <div id="modal-js-example3" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <div>
+                    <strong class="is-size-3">Sign In / Register</strong>
+                </div>
+                <div class="mt-3">
+                    <p>You need to sign in or register to use this feature.</p>
+                </div>
+                <div class="mt-4" style="margin-left: 200px;">
+                    <p class="buttons">
+                        <button class="button is-rounded">
+                            <span class="icon">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </span>
+                            <span>Register</span>
+                        </button>
+                        <button class="button is-primary is-rounded">
+                            <span class="icon">
+                                <i class="fa fa-power-off" aria-hidden="true"></i>
+                            </span>
+                            <span>Sign in</span>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!--end third modal-->
+    <div>
+        <div class="file is-boxed mt-5">
+            <label class="file-label">
+                <input class="file-input" type="file" name="resume" onchange="preview_image(event)">
+                <span class="file-cta" id="uploadImg">
+                    <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                        Drag your image here, or click to browse
+                    </span>
+                </span>
+            </label>
+        </div>
+        <div class="box mt-5 mr-6  has-text-centered" id="imgdiv">
+            <figure class="image is-128x128 has-text-centered " id="imgUpload">
+                <img id="output_image" src="" alt="Upload an image before starting to find average color">
+            </figure>
+            <span class=" has-text-centered mt-2" style="display: none;" id="pic">pic</span>
+        </div>
+        <div style="display: none;" id="colorDiv">
+            <span class=" has-text-centered" id="Algorithm">Algorithm</span>
+            <div class="control mt-3" id="checkBox">
+                <label class="radio">
+                    <input type="radio" name="foobar" onclick="SimpleCheckBox() ">
+                    Simple
+                </label>
+                <label class="radio">
+                    <input type="radio" name="foobar" checked onclick="SquareRootCheckBox()">
+                    Square Root
+                </label>
+                <label class="radio">
+                    <input type="radio" name="foobar" checked onclick="DominantCheckBox()">
+                    Dominant
+                </label>
+            </div>
+            <div class="columns box mt-3" id="colorInfoDiv">
+                <div class="column" id="LightColor" style="background-color: #b5bcc6;"></div>
+                <div class="column">
+                    <h1 class="title is-5">Color Info</h1>
+                    <div id="Simple">
+                        <div>
+                            <span class="icon-text">
+                                <span>HEX</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="hex1">#b5bcc6</span>
+                                <span class="icon" onclick="hex1()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="">
+                                <span>RGBA</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="RGBA1">rgb(181, 188, 198)</span>
+                                <span class="icon" onclick="RGBA1()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>HSLA</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="HSLA1">hsl(215, 13%, 74.3%)</span>
+                                <span class="icon" onclick="HSLA1()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>Type</span>
+                            </span>
+                            <span class="icon-text">
+                                <span>Light Color</span>
+                                <!--<span class="icon">
+                                <i class="fa fa-clone" aria-hidden="true"></i>
+                            </span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <div style="display: none;" id="SquareRoot">
+                        <div>
+                            <span class="icon-text">
+                                <span>HEX</span>
+                            </span>
+                            <span class="icon-text ">
+
+                                <span id="hex2">#c4cdd6</span>
+                                <span class="icon" onclick="hex2()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>RGBA</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="RGBA2">rgb(196, 205, 214)</span>
+                                <span class="icon" onclick="RGBA2()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>HSLA</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="HSLA2">hsl(210, 18%, 80.4%)</span>
+                                <span class="icon" onclick="HSLA2()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>Type</span>
+                            </span>
+                            <span class="icon-text">
+                                <span>Light Color</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div style="display: none;" id="Dominant">
+                        <div>
+                            <span class="icon-text">
+                                <span>HEX</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="hex3">#e8f5fe</span>
+                                <span class="icon" onclick="hex3()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>RGBA</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="RGBA3">rgb(232, 245, 254)</span>
+                                <span class="icon" onclick="RGBA3()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>HSLA</span>
+                            </span>
+                            <span class="icon-text ">
+                                <span id="HSLA3">hsl(205, 91.7%, 95.3%)</span>
+                                <span class="icon" onclick="HSLA3()">
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="">
+                                <span>Type</span>
+                            </span>
+                            <span class="icon-text">
+                                <span>Light Color</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
