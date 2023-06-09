@@ -45,91 +45,91 @@ function DominantCheckBox() {
 function hex1() {
   let copyvalue = document.getElementById("hex1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function RGBA1() {
   let copyvalue = document.getElementById("RGBA1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function HSLA1() {
   let copyvalue = document.getElementById("HSLA1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 /*start square root copy function*/
 function hex2() {
   let copyvalue = document.getElementById("hex1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function RGBA2() {
   let copyvalue = document.getElementById("RGBA1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function HSLA2() {
   let copyvalue = document.getElementById("HSLA2");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  navigator.select();
+  navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 /*start dominant copy function*/
 function hex3() {
   let copyvalue = document.getElementById("hex1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function RGBA3() {
   let copyvalue = document.getElementById("RGBA1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function HSLA3() {
   let copyvalue = document.getElementById("HSLA1");
   alert("copy Text :" + copyvalue.innerText);
-  //copyvalue.select();
-  // copyvalue.setSelectionRange(0, 99999); // For mobile devices
+  //navigator.select();
+  // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  copyvalue.clipboard.writeText(copyvalue.innerText);
+  navigator.clipboard.writeText(copyvalue.innerText);
 }
