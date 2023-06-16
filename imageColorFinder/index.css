@@ -7,15 +7,27 @@
 }
 
 #imgdiv{
-width: 70em;
-    height: 30em;
-    margin-left: 148px;
+/*width: 70em;
+    height: 31em;*/
+    margin-left: 149px;
+    margin-right: 139px !important;
 }
 
 #imgUpload{
-width: 28em;
-    height: 22em;
-    margin: 22px 32px 43px 330px;
+    margin: 10px 56px 20px 56px;
+    /* width: 68em;
+        height: 28em;*/
+   /* width: 25em;*/
+   /* height: 0em;*/
+    /*margin: 10px 10px 1px 1px;*/
+}
+
+#image_before{
+    margin-left: 149px;
+     margin-right: 139px !important;
+     margin-top: 1em;
+     padding-top: 10em;
+     padding-bottom: 10em;
 }
 
 #Algorithm{
@@ -30,3 +42,7 @@ width: 28em;
     width: 38em;
     margin-left: 26em;
 }
+#pic{
+    margin-top: 12px;
+}
+

@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
@@ -193,7 +194,7 @@
     <div>
         <div class="file is-boxed mt-5">
             <label class="file-label">
-                <input class="file-input" type="file" name="resume" onchange="preview_image(event)">
+                <input class="file-input" type="file" name="resume" onchange="preview_image(event)" id="upload_file">
                 <span class="file-cta" id="uploadImg">
                     <span class="file-icon">
                         <i class="fas fa-upload"></i>
@@ -204,11 +205,19 @@
                 </span>
             </label>
         </div>
-        <div class="box mt-5 mr-6  has-text-centered" id="imgdiv">
-            <figure class="image is-128x128 has-text-centered " id="imgUpload">
-                <img id="output_image" src="" alt="Upload an image before starting to find average color">
+        <div class="box has-text-centered" id="image_before">
+            <span class="file-icon icon is-large" style="margin-left: 32em;">
+                <i class="fa fa-pencil icon is-size-4" aria-hidden="true"></i>
+            </span>
+
+            <span class="is-size-4 has-text-centered">Upload an image before starting to find average color</span>
+        </div>
+        <div class="box mt-5  has-text-centered" id="imgdiv" style="display: none;">
+
+            <figure class="image is-2by1  has-text-centered" id="imgUpload">
+                <img id="output_image">
             </figure>
-            <span class=" has-text-centered mt-2" style="display: none;" id="pic">pic</span>
+            <span class=" has-text-centered" style="display: none;" id="filename"></span>
         </div>
         <div style="display: none;" id="colorDiv">
             <strong class=" has-text-centered" id="Algorithm">Algorithm</strong>
