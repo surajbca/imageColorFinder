@@ -19,3 +19,15 @@ function preview_image(event) {
   console.log("image name : " + event.target.files[0].name);
   pic.innerHTML = event.target.files[0].name;
 }
+
+//var colorThief = new preview_image();
+
+//var sourceImage = document.getElementById("output_image");
+
+// Display main color
+// e.g [125, 189, 193]
+//console.log(colorThief.getColor(sourceImage));
+
+// Display palette of colors
+// e.g [[55,37,29],[213,193,136],[110,204,223]]
+//console.log(colorThief.getPalette(sourceImage));
