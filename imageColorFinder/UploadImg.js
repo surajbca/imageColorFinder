@@ -31,3 +31,21 @@ function preview_image(event) {
 // Display palette of colors
 // e.g [[55,37,29],[213,193,136],[110,204,223]]
 //console.log(colorThief.getPalette(sourceImage));
+
+function getBackgroundColor() {
+  var colorThief = new BackgroundColorTheif();
+  var rgb = colorThief.getBackGroundColor(
+    document.getElementById("output_image")
+  );
+  //console.log("background-color = " + rgb);
+  document.getElementById("LightColor").style.backgroundColor =
+    "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
+
+  /* document.getElementById("LightColor").value =
+    document.getElementById("hex1").innerHTML;*/
+
+  var color = document.getElementById("LightColor").value;
+  document.getElementById("hex1").innerHTML = color;
+  document.getElementById("RGBA1").innerHTML = color;
+}
+//
