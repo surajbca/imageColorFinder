@@ -20,32 +20,31 @@ function preview_image(event) {
   pic.innerHTML = event.target.files[0].name;
 }
 
-//var colorThief = new preview_image();
-
-//var sourceImage = document.getElementById("output_image");
-
-// Display main color
-// e.g [125, 189, 193]
-//console.log(colorThief.getColor(sourceImage));
-
-// Display palette of colors
-// e.g [[55,37,29],[213,193,136],[110,204,223]]
-//console.log(colorThief.getPalette(sourceImage));
-
 function getBackgroundColor() {
   var colorThief = new BackgroundColorTheif();
   var rgb = colorThief.getBackGroundColor(
     document.getElementById("output_image")
   );
-  //console.log("background-color = " + rgb);
   document.getElementById("LightColor").style.backgroundColor =
     "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
+
+  //console.log("background-color = " + rgb);
 
   /* document.getElementById("LightColor").value =
     document.getElementById("hex1").innerHTML;*/
 
-  var color = document.getElementById("LightColor").value;
-  document.getElementById("hex1").innerHTML = color;
-  document.getElementById("RGBA1").innerHTML = color;
+  //console.log(rgb);
+  document.getElementById("hex1").innerHTML =
+    "#" + ((1 << 24) + (rgb << 16) + (rgb << 8) + rgb).toString(16).slice(1);
+  document.getElementById("RGBA1").innerHTML = "(" + rgb + ")";
+  document.getElementById("HSLA1").innerHTML = "(" + rgb + ")";
 }
-//
+/*
+function rgbToHex(r, g, b) {
+  var colorThief = new BackgroundColorTheif();
+  var rgb = colorThief.getBackGroundColor(
+    document.getElementById("output_image")
+  );
+}
+return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+console.log(rgbToHex(rgb)); // #1c87c9*/

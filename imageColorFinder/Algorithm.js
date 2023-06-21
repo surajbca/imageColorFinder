@@ -1,4 +1,4 @@
-function SimpleCheckBox() {
+/*function SimpleCheckBox() {
   let SimpleCheckBox = document.getElementById("Simple");
   SimpleCheckBox.style.display = "";
 
@@ -10,11 +10,10 @@ function SimpleCheckBox() {
 
   let SquareRoot = document.getElementById("SquareRoot");
   SquareRoot.style.display = "none";
-}
+}*/
 
-function SquareRootCheckBox() {
-  /* let Dominant = document.getElementById("SquareRoot");
-  Dominant.style.display = "";*/
+/*function SquareRootCheckBox() {
+
   let SquareRoot = document.getElementById("SquareRoot");
   SquareRoot.style.display = "";
 
@@ -26,9 +25,9 @@ function SquareRootCheckBox() {
 
   let SimpleCheckBox = document.getElementById("Simple");
   SimpleCheckBox.style.display = "none";
-}
+}*/
 
-function DominantCheckBox() {
+/*function DominantCheckBox() {
   let Dominant = document.getElementById("Dominant");
   Dominant.style.display = "";
 
@@ -40,7 +39,7 @@ function DominantCheckBox() {
 
   let SquareRoot = document.getElementById("SquareRoot");
   SquareRoot.style.display = "none";
-}
+}*/
 
 function hex1() {
   let copyvalue = document.getElementById("hex1");
@@ -73,17 +72,17 @@ function HSLA1() {
 }
 
 /*start square root copy function*/
-function hex2() {
-  let copyvalue = document.getElementById("hex1");
-  alert("copy Text :" + copyvalue.innerText);
-  //navigator.select();
-  // navigator.setSelectionRange(0, 99999); // For mobile devices
+//function hex2() {
+// let copyvalue = document.getElementById("hex1");
+//alert("copy Text :" + copyvalue.innerText);
+//navigator.select();
+// navigator.setSelectionRange(0, 99999); // For mobile devices
 
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyvalue.innerText);
-}
+// Copy the text inside the text field
+// navigator.clipboard.writeText(copyvalue.innerText);
+//}
 
-function RGBA2() {
+/*function RGBA2() {
   let copyvalue = document.getElementById("RGBA1");
   alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
@@ -91,9 +90,9 @@ function RGBA2() {
 
   // Copy the text inside the text field
   navigator.clipboard.writeText(copyvalue.innerText);
-}
+}*/
 
-function HSLA2() {
+/*function HSLA2() {
   let copyvalue = document.getElementById("HSLA2");
   alert("copy Text :" + copyvalue.innerText);
   navigator.select();
@@ -101,10 +100,10 @@ function HSLA2() {
 
   // Copy the text inside the text field
   navigator.clipboard.writeText(copyvalue.innerText);
-}
+}*/
 
 /*start dominant copy function*/
-function hex3() {
+/*function hex3() {
   let copyvalue = document.getElementById("hex1");
   alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
@@ -112,9 +111,9 @@ function hex3() {
 
   // Copy the text inside the text field
   navigator.clipboard.writeText(copyvalue.innerText);
-}
+}*/
 
-function RGBA3() {
+/*function RGBA3() {
   let copyvalue = document.getElementById("RGBA1");
   alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
@@ -122,9 +121,9 @@ function RGBA3() {
 
   // Copy the text inside the text field
   navigator.clipboard.writeText(copyvalue.innerText);
-}
+}*/
 
-function HSLA3() {
+/*function HSLA3() {
   let copyvalue = document.getElementById("HSLA1");
   alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
@@ -132,4 +131,4 @@ function HSLA3() {
 
   // Copy the text inside the text field
   navigator.clipboard.writeText(copyvalue.innerText);
-}
+}*/
