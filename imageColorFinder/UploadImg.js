@@ -25,26 +25,84 @@ function getBackgroundColor() {
   var rgb = colorThief.getBackGroundColor(
     document.getElementById("output_image")
   );
+  //alert("rgb value from image: " + rgb);
+  let backgroundColor = rgb.toString();
+  //alert("background color : " + backgroundColor);
+  let rgb1 = backgroundColor.split(",")[0];
+  let rgb2 = backgroundColor.split(",")[1];
+  let rgb3 = backgroundColor.split(",")[2];
+  let rgbFirstValue = rgb1.Length == 1 ? "0" + rgb1 : rgb1;
+  let rgbSecondValue = rgb2.Length == 1 ? "0" + rgb2 : rgb2;
+  let rgbThirdValue = rgb3.Length == 1 ? "0" + rgb3 : rgb3;
+  let hexValues = RGBToHEX(rgbFirstValue, rgbSecondValue, rgbThirdValue);
+  // alert("hexvalue : " + hexValues);
+  let rgbaValues =
+    "rgb(" + rgbFirstValue + "," + rgbSecondValue + "," + rgbThirdValue + ")";
+
   document.getElementById("LightColor").style.backgroundColor =
     "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
 
-  //console.log("background-color = " + rgb);
+  document.getElementById("hex1").innerHTML = hexValues;
+  document.getElementById("RGBA1").innerHTML = rgbaValues;
 
-  /* document.getElementById("LightColor").value =
-    document.getElementById("hex1").innerHTML;*/
-
-  //console.log(rgb);
-  document.getElementById("hex1").innerHTML =
-    "#" + ((1 << 24) + (rgb << 16) + (rgb << 8) + rgb).toString(16).slice(1);
-  document.getElementById("RGBA1").innerHTML = "(" + rgb + ")";
-  document.getElementById("HSLA1").innerHTML = "(" + rgb + ")";
-}
-/*
-function rgbToHex(r, g, b) {
-  var colorThief = new BackgroundColorTheif();
-  var rgb = colorThief.getBackGroundColor(
-    document.getElementById("output_image")
+  document.getElementById("HSLA").innerHTML = RGBToHSL(
+    rgbFirstValue,
+    rgbSecondValue,
+    rgbThirdValue
   );
+  document.getElementById("colorType").innerHTML = RGBToColorName(hexValues);
 }
-return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-console.log(rgbToHex(rgb)); // #1c87c9*/
+
+function RGBToHSL(r, g, b) {
+  // Make r, g, and b fractions of 1
+  r /= 255;
+  g /= 255;
+  b /= 255;
+
+  // Find greatest and smallest channel values
+  let cmin = Math.min(r, g, b),
+    cmax = Math.max(r, g, b),
+    delta = cmax - cmin,
+    h = 0,
+    s = 0,
+    l = 0;
+
+  // Calculate hue
+  // No difference
+  if (delta == 0) h = 0;
+  // Red is max
+  else if (cmax == r) h = ((g - b) / delta) % 6;
+  // Green is max
+  else if (cmax == g) h = (b - r) / delta + 2;
+  // Blue is max
+  else h = (r - g) / delta + 4;
+
+  h = Math.round(h * 60);
+
+  // Make negative hues positive behind 360°
+  if (h < 0) h += 360;
+
+  // Calculate lightness
+  l = (cmax + cmin) / 2;
+
+  // Calculate saturation
+  s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+
+  // Multiply l and s by 100
+  s = +(s * 100).toFixed(1);
+  l = +(l * 100).toFixed(1);
+
+  return "hsl(" + h + "," + s + "%," + l + "%)";
+}
+
+function RGBToHEX(r, g, b) {
+  return "#" + ((r << 16) | (g << 8) | b).toString(16).toUpperCase();
+}
+
+function RGBToColorName(hexValue) {
+  var n_match = ntc.name(hexValue);
+  n_rgb = n_match[0]; // RGB value of closest match
+  n_name = n_match[1]; // Text string: Color name
+  n_exactmatch = n_match[2]; // True if exact color match
+  return n_name;
+}
