@@ -43,32 +43,32 @@
 
 function hex1() {
   let copyvalue = document.getElementById("hex1");
+  navigator.clipboard.writeText(copyvalue.innerText);
   alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
   // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function RGBA1() {
   let copyvalue = document.getElementById("RGBA1");
-  alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
+  navigator.clipboard.writeText(copyvalue.innerText);
+  alert("copy Text :" + copyvalue.innerText);
   // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 function HSLA1() {
-  let copyvalue = document.getElementById("HSLA1");
+  let copyvalue = document.getElementById("HSLA");
+  navigator.clipboard.writeText(copyvalue.innerText);
   alert("copy Text :" + copyvalue.innerText);
   //navigator.select();
   // navigator.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyvalue.innerText);
 }
 
 /*start square root copy function*/
